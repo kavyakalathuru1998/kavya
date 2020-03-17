@@ -61,7 +61,7 @@ Then I should click on signUp
 Scenario: Already exsisted user for SignUp
 When I enter the already used username as 'kavyakalathuru123@gmail.com' and password as 'kavyakalathuru'
 Then I should click on signup and I should get popup message as 'This user already exist.'
-Scenario: Empty usename and password
+Scenario: Empty username and password
 When I will not enter the username '' and i will not enter the password ''
 Then I should click on signup and I should get the popup message as 'Please fill out Username and Password.'
 Scenario: checking categories for Phones
