@@ -11,13 +11,13 @@ Feature: Login
 When I enter username as 'kavyakalathuru1998@gmail.com' and I enter password as 'kavyakalathuru'
 Then I Should access to the portal with title as 'Log out'
 
-#Scenario Outline: Valid Credential Test
-#When I enter username as '<username>' and I enter password as '<password>'
-#Then I Should access to the portal with title as '<id>'
-#Examples:
-#|username|password|
-#|veerahemagovada@gmail.com|veerahema|
-#|oohasri234@gmail.com|9493824001|
+Scenario Outline: Valid Credential Test
+When I enter username as '<username>' and I enter password as '<password>'
+Then I Should access to the portal with title as '<id>'
+Examples:
+|username|password|
+|veerahemagovada@gmail.com|veerahema|
+|oohasri234@gmail.com|9493824001|
 
 Scenario: Invalid Password Credential
 When I enter valid username as 'kavyakalathuru1998@gmail.com' and password as 'kavyakalathuru1'
