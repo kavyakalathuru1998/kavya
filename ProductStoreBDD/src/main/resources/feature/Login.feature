@@ -18,6 +18,7 @@ Examples:
 |username|password|
 |veerahemagovada@gmail.com|veerahema|
 |oohasri234@gmail.com|9493824001|
+|suprajaananthu@gmail.com|supraja@403|
 
 Scenario: Invalid Password Credential
 When I enter valid username as 'kavyakalathuru1998@gmail.com' and password as 'kavyakalathuru1'
