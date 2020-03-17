@@ -208,29 +208,7 @@ public class StepDefinition {
 			System.out.println("passed");
 		}
 	}
-	@When("I click on place order")
-	public void i_click_on_place_order() {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Home")));
-		LoginPage.clickOnHomePage(driver);
-		ProductPage.clickOnProduct(driver);
-		AddToCartPage.clickProductToAddToCart(driver);
-		AddToCartPage.clickOnAddToCart(driver);
-		wait.until(ExpectedConditions.alertIsPresent());
-		AddToCartPage.clickOnAlert(driver);
-		CartInfoPage.clickOnCart(driver);
-		PlaceOrderPage.clickOnPlaceOrder(driver);
-	}
-
-	@Then("it should display form for filling details")
-	public void it_should_display_form_for_filling_details() throws InterruptedException {
-	    
-		String actualText=driver.findElement(By.xpath("//span[text()='×']")).getText();
-		Thread.sleep(1000);
-		Assert.assertEquals(actualText, "");
-		driver.quit();
-	}
-	@When("I enter name as {string} and country as {string} and city as {string} and credit card as {string} and month as {string} and year as {string} and click on purchase order")
+@When("I enter my name as {string} and country as {string} and city as {string} and credit card as {string} and month as {string} and year as {string} and click on purchase order")
 	public void i_enter_my_name_as_and_country_as_and_city_as_and_credit_card_as_and_month_as_and_year_as_and_click_on_purchase_order(String name, String country, String city, String creditCard, String month, String year) {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Home")));
@@ -284,8 +262,8 @@ public class StepDefinition {
 	   Assert.assertEquals(actualMissingdetailsText, expectedMissingdetailsText);
 	   driver.quit();
 	}
-	@When("I enter the name in purchase detail as {string} and country as {string} and city as {string} and credit card as {string} and month as {string} and year as {string} and click on purchase order and click on close")
-	public void i_enter_the_name_in_purchase_detail__as_and_country_as_and_city_as_and_credit_card_as_and_month_as_and_year_as_and_click_on_purchase_order_and_click_on_close(String name, String country, String city, String creditCard, String month, String year) {
+	@When("I enter the name in purchase detail  as {string} and country as {string} and city as {string} and credit card as {string} and month as {string} and year as {string} and click on purchase order and click on close")
+	public void i_enter_the_name_in_purchase_detail_as_and_country_as_and_city_as_and_credit_card_as_and_month_as_and_year_as_and_click_on_purchase_order_and_click_on_close(String name, String country, String city, String creditCard, String month, String year) {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Home")));
 		LoginPage.clickOnHomePage(driver);
@@ -312,8 +290,8 @@ public class StepDefinition {
 	   Assert.assertEquals(actualTextInHomeIcon,"PRODUCT STORE");
 	   driver.quit();
 	}
-	@When("I enter the useer name as {string} and country as {string} and city as {string} and credit card as {string} and month as {string} and year as {string} and click on purchase order and click on close button")
-	public void i_enter_the_useer_name_as_and_country_as_and_city_as_and_credit_card_as_and_month_as_and_year_as_and_click_on_purchase_order_and_click_on_close_button(String name, String country, String city, String creditCard, String month, String year) {
+	@When("I enter the useer name as {string} and country as {string} and city as {string} and credit card as {string} and month as {string} and year as {string} and click on purchase order and click on close")
+	public void i_enter_the_useer_name_as_and_country_as_and_city_as_and_credit_card_as_and_month_as_and_year_as_and_click_on_purchase_order_and_click_on_close(String name, String country, String city, String creditCard, String month, String year) {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Home")));
 		LoginPage.clickOnHomePage(driver);
