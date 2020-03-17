@@ -56,11 +56,12 @@ Scenario: Filling all the userdetails and click on close button
 When I enter the useer name as 'kavya' and country as 'India' and city as 'chirala' and credit card as '605385697632' and month as 'nov' and year as '2022' and click on purchase order and click on close
 Then It should go back to the cartpage and assert for 'Place Order' 
 Scenario: Valid signUp
-When I enter username as 'kavyakalathuru1235@gmail.com' and Password as 'kavyakalathuru'
+When I enter username as 'kavyakalathuru12356@gmail.com' and Password as 'kavyakalathuru'
 Then I should click on signUp
 Scenario: Already exsisted user for SignUp
 When I enter the already used username as 'kavyakalathuru123@gmail.com' and password as 'kavyakalathuru'
 Then I should click on signup and I should get popup message as 'This user already exist.'
+Scenario: Empty usename and password
 When I will not enter the username '' and i will not enter the password ''
 Then I should click on signup and I should get the popup message as 'Please fill out Username and Password.'
 Scenario: checking categories for Phones
